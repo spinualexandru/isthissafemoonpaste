@@ -1,0 +1,34 @@
+h1 {
+  margin: 32px auto;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  color: #32bf71;
+}
+.feature-image {
+  width: 25%;
+  max-width: 460px;
+}
+form {
+  margin-bottom: 25px;
+}
+#check-contract {
+  margin-top: 24px;
+  background-color: #32bf71;
+  color: white;
+}
+#check-contract__wrapper {
+  max-width: 550px;
+    form {
+      text-align: left;
+    }
+
+}
+#bar {
+position: absolute;
+width: 550px;
+}

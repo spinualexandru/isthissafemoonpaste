@@ -1,0 +1,42 @@
+<img
+  class="feature-image"
+  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1200px-Emoji_u1f4a9.svg.png"
+/>
+<h3 class="igx-typography__h3 igx-primary-500-text">
+  So you wanna buy a BSC shitcoin?
+</h3>
+<h2 class="igx-typography__h5 " *ngIf="initialLoad || hasError">Find out if your shitcoin Safemoon copy pasta</h2>
+<h2 class="igx-typography__h5 " *ngIf="loading && !hasError">Loading...</h2>
+<h2 class="igx-typography__h5 " *ngIf="!loading && isPasta && !hasError">Yes, it is 💩</h2>
+<h2 class="igx-typography__h5 " *ngIf="!loading && !isPasta && !initialLoad && !hasError">It's not a copy pasta but probably it's a scam too💩</h2>
+
+<div id="check-contract__wrapper">
+  <form>
+    <igx-input-group>
+      <input igxInput name="contractId" #contractAddress type="text" />
+      <label igxLabel for="contractId">Contract Address</label>
+     
+    </igx-input-group>
+          <igx-linear-bar
+      *ngIf="loading"
+      type="default"
+      [value]="100"
+      id="bar"
+    ></igx-linear-bar>
+      <igx-toast #errorToast></igx-toast>
+  </form>
+
+
+  <div id="submit_wrapper">
+    <button
+      igxButton="raised"
+      igxRipple="white"
+      id="check-contract"
+      (click)="getTokenData(contractAddress.value, errorToast)"
+    >
+      Check contract
+    </button>
+    
+
+  </div>
+</div>
